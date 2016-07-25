@@ -23,7 +23,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">AAS Building</a>
+                    <a class="navbar-brand" href="{{path('homepage')}}">AAS Building</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -43,26 +43,28 @@
                     <li role="presentation"><a href="#">Location de bureaux meublés</a></li>
                 </ul>
             {% endblock %}
-            
+
             {% block body %}
                 <div class="contain col-md-9">
                     <h1>Mettre un H1</h1>
                     <p>Aller dans modifier et ajouter un li, un h1, ou un p</p>
                 </div>
             {% endblock %}
+        </div>
+    </div>
 
             {% block footer %}
-                <div class="footer col-md-12">
+            <div class=" navbar-fixed-bottom navbar-inverse hidden-xs">
+                <div class="footer col-md-12 col-sm-12">
                     Location bureaux | Adhésion réseau | Avantage réseau | Carte de notre réseau
                     Domiciliation commerciale | Formulaire renseignements | Les relais multi-site
                     Les services | Location de bureaux | Notre réseau national | Notre réseau international
                     Permanence téléphonique | Plan du site | Secrétariat | Centre d’affaire
                 </div>
-                <span class="right col-md-12">© 2010 aas building centres d'affaires et location de bureaux. Tous droits réservés.</span>
+                <span class="copyright col-md-12 col-sm-12">© 2010 aas building centres d'affaires et location de bureaux. Tous droits réservés.</span>
+            </div>
             {% endblock %}
-        </div>
-    </div>
-
+        
     {% block javascripts %}
         {% javascripts
         '../vendor/jquery/jquery/jquery-1.9.1.min.js'

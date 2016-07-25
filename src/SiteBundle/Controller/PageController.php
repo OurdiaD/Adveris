@@ -65,7 +65,7 @@ class PageController extends Controller
             $em->persist($page);
             $em->flush();
 
-            return $this->redirectToRoute('_show', array('id' => $page->getId()));
+            return $this->redirectToRoute('admin', array('id' => $page->getId()));
         }
 
         return $this->render('page/new.html.twig', array(
