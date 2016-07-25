@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Page list</h1>
+        <ul>
+            <li>
+                <a href="{{ path('_new') }}">Créer un nouvel élément</a>
+            </li>
+        </ul>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Balise</th>
+                <th>Texte</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for page in pages %}
+            <tr>
+                <td>{{ page.id }}</td>
+                <td>{{ page.balise }}</td>
+                <td>{{ page.texte }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('_edit', { 'id': page.id }) }}">Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

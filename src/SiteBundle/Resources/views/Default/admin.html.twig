@@ -1,0 +1,15 @@
+{% extends 'SiteBundle::base.html.twig' %}
+
+{% block body %}
+{{dump(infos)}}
+	<table>
+		{% for info in infos %}
+			<tr>
+				<td>{{info.balise}}</td>	
+	            <td>{{info.texte}}</td>	   
+	            <td><a href="{{ path('edit', { 'id': info.id }) }}">Modifier</a></td>     
+			<tr>
+		{% endfor %}
+	</table>
+	<a href="#">ajouter un element a la liste</a>
+{% endblock %}

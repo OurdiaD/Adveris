@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Centre d'affaires et location de bureaux -  AASbuilding{% endblock %}</title>
+
+    {% block stylesheets %}
+        {% stylesheets
+        '%kernel.root_dir%/../vendor/twitter/bootstrap/less/bootstrap.less'
+        '%kernel.root_dir%/../vendor/twitter/bootstrap/less/responsive.less'
+        filter='lessphp,cssrewrite'
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    {% endblock %}
+</head>
+<body>
+
+<div class="container row-fluid">
+    {% block header %}
+    <div class="span12">
+        <div class="span2">
+            <img src="{{ asset('images/index_01.jpg') }}" />
+        </div>
+        <div class="span10">
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="{{path('homepage')}}">Home</a></li>
+                <li role="presentation"><a href="{{path('admin')}}">Modifier</a></li>
+            </ul>
+            <div class="header">
+                <h1>Groupement de 32 Centres d'Affaires Indépendants</h1>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <div class="span12">
+        {% block nav %}
+            
+        {% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %}
+            <div class="footer span10 offset2">
+                Location bureaux | Adhésion réseau | Avantage réseau | Carte de notre réseau
+                Domiciliation commerciale | Formulaire renseignements | Les relais multi-site
+                Les services | Location de bureaux | Notre réseau national | Notre réseau international
+                Permanence téléphonique | Plan du site | Secrétariat | Centre d’affaire
+            </div>
+            <span class="right span10 offset2">© 2010 aas building centres d'affaires et location de bureaux. Tous droits réservés.</span>
+        {% endblock %}
+    </div>
+</div>
+
+{% block javascripts %}
+    {% javascripts
+    '../vendor/jquery/jquery/jquery-1.9.1.min.js'
+    '../vendor/twitter/bootstrap/js/bootstrap-dropdown.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        {% block document_ready %}{% endblock %}
+    });
+</script>
+</body>
+</html>

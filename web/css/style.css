@@ -1,0 +1,30 @@
+/* Icon url */
+/*[class^="icon-"], [class*=" icon-"] {
+    background-image: url(../images/glyphicons-halflings.png);
+}
+.icon-white, .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:focus > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > li > a:focus > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"], .dropdown-submenu:hover > a > [class^="icon-"], .dropdown-submenu:focus > a > [class^="icon-"], .dropdown-submenu:hover > a > [class*=" icon-"], .dropdown-submenu:focus > a > [class*=" icon-"] {
+    background-image: url(../images/glyphicons-halflings-white.png);
+}*/
+/* My css */    
+
+body { 
+	padding-top: 50px; 
+	padding-bottom: 70px; 
+}
+
+/*.header{
+	background: url(../css/images/index_03.jpg) no-repeat;
+	background-size: 100% 100%;
+	height: 100%;
+}
+
+.header h1{
+	font-size: 1em;
+	width: 50%;
+	margin-left: 15%;
+}
+*/
+.footer, .copyright{
+	color: white;
+	text-align: center;
+}

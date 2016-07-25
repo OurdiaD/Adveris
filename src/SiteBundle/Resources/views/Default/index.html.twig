@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block nav %}
+	{% if not infos %}
+		{{ parent() }}
+	{% endif %}
+	{% if infos %}
+		<ul class="nav nav-pills nav-stacked col-md-3">
+			{% for info in infos %}
+				{% if info.balise == 'li' %}
+		            <li role="presentation"><a href="#">{{info.texte}}</a></li>	        
+				{% endif %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock %}
+
+{% block body %}
+	{% if not infos %}
+		{{ parent() }}
+	{% endif %}
+	{% if infos %}
+	    <div class="contain col-md-9">
+	    {% for info in infos %}
+			{% if info.balise == 'h1' %}
+	            <h1>{{info.texte}}</h1>        
+			{% endif %}
+			{% if info.balise == 'p' %}
+	            <p>{{info.texte}}</p>        
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+    </div>
+{% endblock %}
