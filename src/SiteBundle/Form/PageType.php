@@ -5,6 +5,7 @@ namespace SiteBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class PageType extends AbstractType
 {
@@ -16,8 +17,15 @@ class PageType extends AbstractType
     {
         $builder
             ->add('balise')
-            ->add('texte')
-        ;
+            ->add('texte', ChoiceType::class, array(
+                'choices' =>  array(
+                    'h1' => 'h1',
+                    'li' => 'li',
+                    'p' => 'p'
+                    ),
+                'required'    => true,
+                'placeholder' => 'Balise', 
+        ));
     }
     
     /**

@@ -65,14 +65,9 @@
             </div>
             {% endblock %}
         
-    {% block javascripts %}
-        {% javascripts
-        '../vendor/jquery/jquery/jquery-1.9.1.min.js'
-        '../vendor/twitter/bootstrap/js/dropdown.js'
-        %}
+    {% javascripts '@jquery' '@bootstrap_js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-    {% endblock %}
+    {% endjavascripts %}
 
     <script type="text/javascript">
         $(document).ready(function() {
